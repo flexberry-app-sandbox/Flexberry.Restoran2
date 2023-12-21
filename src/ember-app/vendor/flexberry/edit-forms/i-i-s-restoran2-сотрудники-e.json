@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Должность",
+      "projection": "ДолжностьL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Сотрудники",
+  "name": "IISRestoran2СотрудникиE",
+  "className": "СотрудникиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran2-сотрудники",
+      "modelProjection": "СотрудникиE"
+    }
+  ]
+}

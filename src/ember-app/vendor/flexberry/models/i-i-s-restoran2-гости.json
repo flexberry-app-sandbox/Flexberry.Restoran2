@@ -1,0 +1,148 @@
+﻿{
+  "name": "IISRestoran2Гости",
+  "modelName": "i-i-s-restoran2-гости",
+  "className": "Гости",
+  "nameSpace": "IIS.Restoran2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодГостя",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "телефон",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фИО",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "скидка",
+      "relatedTo": "i-i-s-restoran2-скидка",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ГостиE",
+      "modelName": "i-i-s-restoran2-гости",
+      "attrs": [
+        {
+          "name": "кодГостя",
+          "caption": "Код гостя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "телефон",
+          "caption": "Телефон",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Код",
+          "lookupValueField": "код",
+          "relationName": "Скидка",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Уникальный код скидки",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Скидка",
+          "name": "скидка",
+          "relatedTo": "i-i-s-restoran2-скидка",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ГостиL",
+      "modelName": "i-i-s-restoran2-гости",
+      "attrs": [
+        {
+          "name": "кодГостя",
+          "caption": "Код гостя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "телефон",
+          "caption": "Телефон",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Скидка",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Уникальный код скидки",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Уникальный код скидки",
+          "name": "скидка",
+          "relatedTo": "i-i-s-restoran2-скидка",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

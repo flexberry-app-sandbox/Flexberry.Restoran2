@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-restoran2-бронь-e",
+  "editForm": "i-i-s-restoran2-бронь-e",
+  "external": false,
+  "caption": "Бронь",
+  "name": "IISRestoran2БроньL",
+  "className": "БроньL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran2-бронь",
+      "modelProjection": "БроньL"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+﻿{
+  "applicationCaption": "Restoran2",
+  "applicationTitle": "Restoran2",
+  "items": [
+    {
+      "link": null,
+      "menuName": "бронь",
+      "caption": "Бронь",
+      "title": "Бронь",
+      "children": [
+        {
+          "link": "i-i-s-restoran2-бронь-l",
+          "menuName": null,
+          "caption": "Бронь",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-сотрудников",
+      "caption": "Справочник сотрудников",
+      "title": "Справочник сотрудников",
+      "children": [
+        {
+          "link": "i-i-s-restoran2-должность-l",
+          "menuName": null,
+          "caption": "Должность",
+          "title": "Должность",
+          "children": null
+        },
+        {
+          "link": "i-i-s-restoran2-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "Сотрудники",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-гостей",
+      "caption": "Справочник гостей",
+      "title": "Справочник гостей",
+      "children": [
+        {
+          "link": "i-i-s-restoran2-скидка-l",
+          "menuName": null,
+          "caption": "Скидка",
+          "title": "Скидка",
+          "children": null
+        },
+        {
+          "link": "i-i-s-restoran2-гости-l",
+          "menuName": null,
+          "caption": "Гости",
+          "title": "Гости",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-столов",
+      "caption": "Справочник столов",
+      "title": "Справочник столов",
+      "children": [
+        {
+          "link": "i-i-s-restoran2-стол-l",
+          "menuName": null,
+          "caption": "Стол",
+          "title": "Стол",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочник-ресторанов",
+      "caption": "Справочник ресторанов",
+      "title": "Справочник ресторанов",
+      "children": [
+        {
+          "link": "i-i-s-restoran2-ресторан-l",
+          "menuName": null,
+          "caption": "Ресторан",
+          "title": "Ресторан",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

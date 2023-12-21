@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-restoran2-скидка-e",
+  "editForm": "i-i-s-restoran2-скидка-e",
+  "external": false,
+  "caption": "Скидка",
+  "name": "IISRestoran2СкидкаL",
+  "className": "СкидкаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran2-скидка",
+      "modelProjection": "СкидкаL"
+    }
+  ]
+}

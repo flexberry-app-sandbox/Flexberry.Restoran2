@@ -1,0 +1,272 @@
+﻿{
+  "name": "IISRestoran2Бронь",
+  "modelName": "i-i-s-restoran2-бронь",
+  "className": "Бронь",
+  "nameSpace": "IIS.Restoran2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодБрони",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "комментарий",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "скидка",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "ресторан",
+      "relatedTo": "i-i-s-restoran2-ресторан",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-restoran2-сотрудники",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "стол",
+      "relatedTo": "i-i-s-restoran2-стол",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "запись",
+      "relatedTo": "i-i-s-restoran2-запись",
+      "inverse": "бронь"
+    }
+  ],
+  "projections": [
+    {
+      "name": "БроньE",
+      "modelName": "i-i-s-restoran2-бронь",
+      "attrs": [
+        {
+          "name": "кодБрони",
+          "caption": "Код брони",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "комментарий",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "скидка",
+          "caption": "Скидка",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Ресторан",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Ресторан",
+          "name": "ресторан",
+          "relatedTo": "i-i-s-restoran2-ресторан",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-restoran2-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": "НомерСтола",
+          "lookupValueField": "номерСтола",
+          "relationName": "Стол",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерСтола",
+              "caption": "Номер стола",
+              "hidden": true,
+              "index": 8
+            },
+            {
+              "name": "колвоМест",
+              "caption": "Количество мест за столом",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Номер стол",
+          "name": "стол",
+          "relatedTo": "i-i-s-restoran2-стол",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ЗаписьE",
+          "caption": "Запись",
+          "name": "запись",
+          "relatedTo": "i-i-s-restoran2-запись",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "БроньL",
+      "modelName": "i-i-s-restoran2-бронь",
+      "attrs": [
+        {
+          "name": "кодБрони",
+          "caption": "Код брони",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "комментарий",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "скидка",
+          "caption": "Скидка",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Ресторан",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование ресторана",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование ресторана",
+          "name": "ресторан",
+          "relatedTo": "i-i-s-restoran2-ресторан",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО сотрудника",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО сотрудника",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-restoran2-сотрудники",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Стол",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерСтола",
+              "caption": "Номер стола",
+              "hidden": false,
+              "index": 5
+            },
+            {
+              "name": "колвоМест",
+              "caption": "Количество мест за столом",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер стола",
+          "name": "стол",
+          "relatedTo": "i-i-s-restoran2-стол",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

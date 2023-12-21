@@ -1,0 +1,135 @@
+<h3 class="ui header">{{t "forms.i-i-s-restoran2-бронь-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.кодБрони
+      class=(if (v-get validationModel "кодБрони" "isInvalid") "error")
+      label=(t "forms.i-i-s-restoran2-бронь-e.кодБрони-caption")
+      data-test-i-i-s-restoran2-бронь-e-кодБрони=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "кодБрони" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.комментарий
+      class=(if (v-get validationModel "комментарий" "isInvalid") "error")
+      label=(t "forms.i-i-s-restoran2-бронь-e.комментарий-caption")
+      data-test-i-i-s-restoran2-бронь-e-комментарий=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "комментарий" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-restoran2-бронь-e.скидка-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.скидка
+      class=(if (v-get validationModel "скидка" "isInvalid") "error")
+      data-test-i-i-s-restoran2-бронь-e-скидка=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "скидка" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-restoran2-бронь-e.ресторан-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.ресторан
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="ресторан"
+      projection="РесторанL"
+      title=(t "forms.i-i-s-restoran2-бронь-e.ресторан-caption")
+      readonly=readonly
+      componentName="ресторанLookup"
+      class=(if (v-get validationModel "ресторан" "isInvalid") "error")
+      data-test-i-i-s-restoran2-бронь-e-ресторан=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "ресторан" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-restoran2-бронь-e.сотрудники-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудники
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="сотрудники"
+      projection="СотрудникиL"
+      title=(t "forms.i-i-s-restoran2-бронь-e.сотрудники-caption")
+      readonly=readonly
+      componentName="сотрудникиLookup"
+      class=(if (v-get validationModel "сотрудники" "isInvalid") "error")
+      data-test-i-i-s-restoran2-бронь-e-сотрудники=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудники" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-restoran2-бронь-e.стол-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.стол
+      displayAttributeName="номерСтола"
+      autocomplete=true
+      relationName="стол"
+      projection="СтолL"
+      title=(t "forms.i-i-s-restoran2-бронь-e.стол-caption")
+      readonly=readonly
+      componentName="столLookup"
+      class=(if (v-get validationModel "стол" "isInvalid") "error")
+      data-test-i-i-s-restoran2-бронь-e-стол=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "стол" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.стол.колвоМест
+      class=(if (v-get validationModel.стол "колвоМест" "isInvalid") "error")
+      label=(t "forms.i-i-s-restoran2-бронь-e.стол.колвоМест-caption")
+      data-test-i-i-s-restoran2-бронь-e-стол-колвоМест=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.стол "колвоМест" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-restoran2-бронь-e.запись-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="записьGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.запись
+      content=model.запись
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "запись" "isInvalid") "error")
+      data-test-i-i-s-restoran2-бронь-e-запись=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "запись" "message")}}
+  </div>
+</form>

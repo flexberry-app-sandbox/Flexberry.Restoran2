@@ -1,0 +1,47 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Ресторан",
+      "projection": "РесторанL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Стол",
+      "projection": "СтолL",
+      "detailModelName": null
+    },
+    {
+      "master": "гости",
+      "displayAttributeName": "фИО",
+      "required": true,
+      "relationName": "Запись.Гости",
+      "projection": "ГостиL",
+      "detailModelName": "i-i-s-restoran2-запись"
+    }
+  ],
+  "external": false,
+  "caption": "Бронь",
+  "name": "IISRestoran2БроньE",
+  "className": "БроньE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-restoran2-бронь",
+      "modelProjection": "БроньE"
+    }
+  ]
+}
